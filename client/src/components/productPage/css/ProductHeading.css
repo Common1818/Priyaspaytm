@@ -1,0 +1,56 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: #f1f1f1;
+}
+
+.svg-icon circle {
+    stroke: #f1f1f1;
+    background-color: orange !important;
+    stroke-width: 1;
+}
+
+
+/* --------------- */
+
+.product-header {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-header h3 {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    padding-left: 7%;
+}
+
+.product-header .rating-box {
+    margin-right: 7%;
+}
+
+.rating-box {
+    position: relative;
+    top: 5px;
+    /* min-width: 30px; */
+    background-color: #f1f1f1;
+    color: #111;
+    height: 25px;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.rating-box img {
+    width: 14px;
+}

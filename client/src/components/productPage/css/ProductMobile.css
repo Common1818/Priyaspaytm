@@ -1,0 +1,26 @@
+.product-image-container.mobile .cover-image {
+    width: 100%;
+}
+
+.product-image-container.mobile .cover-image img {
+    width: 100%;
+}
+
+.product-image-container.mobile .not-cover-image {
+    /* width: 100vw; */
+    /* padding: 10px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.product-image-container.mobile .not-cover-image div {
+    border: 1px solid #f1f1f1;
+    margin: 2px;
+    padding: 11px;
+    width: 25%;
+}
+
+.product-image-container.mobile .not-cover-image div img {
+    width: 100%;
+}

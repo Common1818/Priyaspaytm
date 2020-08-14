@@ -1,0 +1,42 @@
+.products-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url('https://images.unsplash.com/photo-1521078803125-7efd09b65b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    padding-bottom: 40px;
+    background-color: #2b060c !important;
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-position: center;
+}
+
+.products-container h1 {
+    color: White;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.products-container nav {
+    background: transparent !important;
+}
+
+.products-container ul li button {
+    background: transparent;
+    color: #48cfad;
+    border: 1px solid #48cfad;
+    font-weight: 900;
+    font-size: 1.7rem !important;
+}
+
+.products-container ul li button:focus {
+    background-color: #108f6f;
+    color: white;
+}
+
+@media(max-width: 786px) {
+    .products-container #make-3D-space {
+        left: 4%;
+    }
+}

@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+.admin-container {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgb(195, 227, 239) 0%, rgba(51, 98, 123, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-weight: 700;
+}
+
+#container {
+    display: table;
+    width: 100vw;
+    background: #202b33;
+    /* margin: 60px auto; */
+    border-radius: 4px;
+}
+
+#sideMenu h1 {
+    color: #ec1561;
+    font-weight: 400;
+}
+
+
+/* Side Bar */
+
+#sideMenu {
+    width: 240px;
+    height: 100%;
+    padding: 30px;
+    border-right: 1px solid #111;
+    display: table-cell;
+    vertical-align: top;
+    color: #fff;
+}
+
+.menu {
+    list-style: none;
+    margin: 24px 0;
+    padding: 0;
+}
+
+.menu li {
+    color: #ec1561;
+    font-weight: 300 !important;
+    display: block;
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, .6);
+    position: relative;
+}
+
+.menu li:hover {
+    color: #239ae3;
+}
+
+.menu li:first-child {
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.addCategory {
+    font-size: 13px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, .2);
+}
+
+.addCategory:hover {
+    color: #fff;
+}

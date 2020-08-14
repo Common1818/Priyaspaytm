@@ -1,0 +1,239 @@
+.productForm-container {
+    min-height: 60vh;
+    font-family: "Lato", sans-serif;
+    background: #f1f1f1;
+}
+
+
+/***** For Smartphones *******/
+
+.container-center {
+    position: absolute;
+    left: 50%;
+    top: 10px !important;
+    width: 85%;
+    height: auto;
+    background-color: transparent;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    bottom: 50%;
+    -webkit-transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%);
+}
+
+.productForm-container h2,
+.productForm-container img {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.productForm-container h4 {
+    text-align: center;
+    color: black;
+    font-size: 1.1em;
+    font-family: times;
+    font-style: normal;
+    line-height: 130%;
+    opacity: 0.6;
+}
+
+.productForm-container form {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fefefe;
+    padding: 21px 13px;
+    border-radius: 21px;
+    -webkit-box-shadow: 0px 5px 34px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 34px rgba(0, 0, 0, 0.1);
+}
+
+.productForm-container formgroup {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 2em 0;
+    font-size: 1em;
+}
+
+.productForm-container formgroup input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #888888;
+    padding: 8px 0;
+    font-size: inherit !important;
+    margin-bottom: 13px;
+    outline: none;
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.productForm-container formgroup input:focus {
+    opacity: 1;
+    border-bottom: 2px solid #f71442;
+    color: #f71442;
+}
+
+.productForm-container formgroup label {
+    text-align: center;
+    position: absolute;
+    font-size: 0.8em;
+    top: -1em;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0.7;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+.productForm-container formgroup span {
+    position: absolute;
+    top: -1em;
+    left: -500px;
+    opacity: 0;
+    color: #333333;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.productForm-container formgroup input:focus+label {
+    left: 500px;
+    opacity: 0;
+}
+
+.productForm-container formgroup input:focus~span {
+    left: 0;
+    opacity: 1;
+}
+
+.productForm-container .forgot {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 21px;
+    opacity: 0.8;
+}
+
+.productForm-container #login-btn {
+    border: none;
+    color: #fefefe;
+    padding: 0.8em 0;
+    font-size: 1em;
+    font-weight: 300;
+    width: 100%;
+    border-radius: 55px;
+    -webkit-box-shadow: 0px 3px 21px rgba(255, 100, 0, 0.7);
+    box-shadow: 0px 3px 21px rgba(255, 100, 0, 0.7);
+    background: -webkit-gradient( linear, left top, right top, from(#f98340), to(#f71442));
+    background: linear-gradient(to right, #f98340, #f71442);
+    background-size: 100%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.productForm-container .social {
+    margin-top: 1.8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.productForm-container .social button {
+    width: 50%;
+    margin: 0 8px;
+    padding: 10px 0;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 34px;
+    -webkit-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.productForm-container .social #facebook {
+    background: #1f4788;
+    background: -webkit-gradient( linear, left top, right top, from(#4b77be), to(#1f4788));
+    background: linear-gradient(to right, #4b77be, #1f4788);
+    background-size: 100%;
+}
+
+.productForm-container .social #google {
+    background: #fefefe;
+    background: -webkit-gradient( linear, left top, right top, from(#fefefe), to(#f1f1f1));
+    background: linear-gradient(to right, #fefefe, #f1f1f1);
+    background-size: 100%;
+    color: #f71442;
+}
+
+.productForm-container p {
+    color: white;
+    text-align: center;
+}
+
+.productForm-container p a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/***** For Tablets *******/
+
+@media screen and (min-width: 480px) {
+    .productForm-container .container-center {
+        width: 70%;
+    }
+    .productForm-container #login-btn {
+        padding: 0.8em 0;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-center {
+        position: absolute;
+        left: 50%;
+        top: -130px !important;
+        width: 85%;
+        height: auto;
+        background-color: transparent;
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+        bottom: 50%;
+        -webkit-transform: translateX(-50%) translateY(50%);
+        transform: translateX(-50%) translateY(50%);
+    }
+    .productForm-container {
+        min-height: 60vh;
+        font-family: "Lato", sans-serif;
+        background: linear-gradient(to top, #f71543, #eb833e);
+    }
+}
+
+
+/***** For Desktop Monitors *******/
+
+@media screen and (min-width: 768px) {
+    .productForm-container .container-center {
+        width: 50vw;
+        background: linear-gradient(to top, #f71543, #eb833e);
+        border-radius: 40px;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .productForm-container {
+        min-height: 80vh;
+        font-family: "Lato", sans-serif;
+        background: #f1f1f1;
+    }
+}

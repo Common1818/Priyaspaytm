@@ -1,0 +1,12 @@
+.product-image-container input {
+    width: 100%;
+}
+
+.add-product-url {
+    width: 100% !important;
+}
+
+.add-product-url input {
+    width: 100%;
+    font-size: 2rem;
+}

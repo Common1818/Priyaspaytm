@@ -1,0 +1,28 @@
+.product-image-container.desktop>div {
+    padding-top: 70px;
+}
+
+.product-image-container.desktop div:nth-child(2) img {
+    width: 100%;
+    /* background: orange; */
+}
+
+.product-image-container.desktop div:first-child img {
+    width: 80%;
+    height: 30%;
+    padding: 10%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.product-image-container.desktop div:first-child {
+    overflow-y: scroll;
+    height: 100% !important;
+}
+
+@media(max-width:1000px) {
+    .product-image-container.desktop>div {
+        padding-top: 10px;
+    }
+}

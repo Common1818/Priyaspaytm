@@ -1,0 +1,1640 @@
+:root {
+    --nav-background: #d90429;
+    --nav-secondary-background: #edf2f4;
+    --nav-button-highlights: #00b4d8;
+    --nav-font-color: #1d3557;
+}
+
+.SearchButton {
+    position: absolute;
+    right: 10%;
+    top: 32%;
+}
+
+.SearchButton:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 650px) {
+    .SearchButton {
+        display: none;
+    }
+}
+
+div#appNavOptions.appNavOptions {
+    background-color: var(--nav-secondary-background) !important;
+}
+
+div.topNavLogo.visible-xs {
+    background-color: inherit !important;
+}
+
+div.bdRow.controlRow {
+    background: var(--nav-background) !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+div.bdRow.topRow.graidentBar {
+    background: var(--nav-background) !important;
+    border-radius: 20px;
+}
+
+div#appNavParent.appNavParent {
+    background: var(--nav-secondary-background) !important;
+    color: #111;
+}
+
+ul.list-unstyled.topLevelNav {
+    background: var(--nav-secondary-background) !important;
+    color: #111;
+}
+
+div#appNavOptions.hidden-xs.hiddenTransform {
+    background: var(--nav-secondary-background) !important;
+    color: #111;
+}
+
+div#searchBar.hidden-xs.hiddenTransform {
+    background: var(--nav-secondary-background) !important;
+    color: #111;
+}
+
+.appIcon {
+    background-color: #edf2f4 !important;
+    height: auto !important;
+}
+
+.appNavParent li a {
+    color: #1d3557 !important;
+}
+
+.appNavParent .h1,
+.appNavParent .h2,
+.appNavParent .h3,
+.appNavParent .h4,
+.appNavParent h1,
+.appNavParent h2,
+.appNavParent h3,
+.appNavParent h4 {
+    text-transform: uppercase;
+    margin: 0;
+    margin: 20px 0 10px;
+    font-weight: 700;
+}
+
+.appNavParent .h1,
+h1 {
+    font-size: 2.8125rem;
+}
+
+.appNavParent .h2,
+.appNavParent h2 {
+    font-size: 2.1875rem;
+}
+
+.appNavParent .h3,
+h3 {
+    font-size: 1.875rem;
+}
+
+.appNavParent .h4,
+h4 {
+    font-size: 1.5625rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .appIcon {
+        opacity: 0.95;
+        height: auto !important;
+    }
+    div.bdRow.topRow.graidentBar {
+        background: var(--nav-background) !important;
+        border-radius: 0;
+    }
+    .h1,
+    h1 {
+        font-size: 2.1875rem;
+    }
+    .h2,
+    h2 {
+        font-size: 1.875rem;
+    }
+    .h3,
+    h3 {
+        font-size: 1.5625rem;
+    }
+    .h4,
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+.appNavParent .bdRow.topRow {
+    padding: 0 10px;
+}
+
+.appNavParent .bdRow.topRow .closerButton {
+    width: 30px;
+    padding: 8px;
+    border-radius: 50%;
+    opacity: 0.9;
+    margin: 15px 15px 0 auto;
+}
+
+.appNavParent .bdRow.topRow .appIcon {
+    float: left;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08);
+}
+
+.appNavParent .bdRow.topRow .appIcon a {
+    display: block;
+}
+
+.appNavParent .bdRow.topRow .appIcon a img {
+    height: 60px;
+}
+
+.appNavParent .bdRow.topRow .appControls {
+    width: calc(100% - 120px);
+    float: right;
+}
+
+.appNavParent .bdRow.topRow .appControls .bdRow .segment {
+    cursor: pointer;
+    width: 40px;
+    height: 60px;
+    float: right;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 9px 9px;
+    text-align: center;
+    line-height: 13px;
+}
+
+.appNavParent .bdRow.topRow .appControls .bdRow .segment img {
+    padding: 3px;
+    margin-bottom: -3px;
+}
+
+.appNavParent .bdRow.topRow .appControls .bdRow .segment a {
+    display: block;
+    color: #fff;
+}
+
+.appNavParent .bdRow.topRow .appControls .bdRow .segment:first-child {
+    margin-right: 0;
+}
+
+.appNavParent .bdRow.topRow .searchBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    overflow: auto;
+    background: #fdfdfd;
+    z-index: 200;
+    padding: 15px;
+}
+
+.appNavParent .bdRow.topRow .searchBar .form-group {
+    width: 100%;
+}
+
+.appNavParent .bdRow.topRow .searchBar .form-group .defaultInput {
+    font-size: 1.3rem;
+    padding-left: 35px;
+    background: #fff url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/navigation/search-icon-888888.svg) no-repeat 10px center;
+    background-size: 15px;
+}
+
+.appNavParent .bdRow.topRow .searchBar .form-group .errorMessage {
+    bottom: -12px;
+    right: 17px;
+    top: auto;
+    transform: none;
+    -webkit-transform: none;
+}
+
+.appNavParent .bdRow.topRow .appNavOptions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 500;
+    overflow: auto;
+    background: #fdfdfd;
+}
+
+.appNavParent .bdRow.topRow .appNavOptions .topLevelNav li {
+    cursor: pointer;
+}
+
+.appNavParent .bdRow.topRow.menuRow {
+    padding: 0;
+}
+
+.appNavParent .brandPromiseBar {
+    white-space: nowrap;
+    overflow: auto;
+    text-align: center;
+    background: #f9f9f9;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.appNavParent .brandPromiseBar .bpItem {
+    padding: 15px 15px 15px 35px;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.appNavParent .brandPromiseBar .bpItem.one {
+    background: url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/navigation/package.svg) no-repeat 10px center;
+    background-size: 20px;
+}
+
+.appNavParent .brandPromiseBar .bpItem.two {
+    background: url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/navigation/free-delivery-truck.svg) no-repeat 10px center;
+    background-size: 20px;
+}
+
+.appNavParent .brandPromiseBar .bpItem.three {
+    background: url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/navigation/tag.svg) no-repeat 10px center;
+    background-size: 20px;
+}
+
+.appNavParent .brandPromiseBar .bpItem.four {
+    background: url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/navigation/shield.svg) no-repeat 10px center;
+    background-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .appNavParent .bdRow.topRow .searchBar {
+        padding: 0;
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.15s;
+        -webkit-transition-duration: 0.15s;
+        -ms-transition-duration: 0.15s;
+        -moz-transition-duration: 0.15s;
+        -o-transition-duration: 0.15s;
+        transition-timing-function: linear;
+        -webkit-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        -ms-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        transition: all 0.15s linear;
+        --webkit-transition: all 0.15s linear;
+        --o-transition: all 0.15s linear;
+        --ms-transition: all 0.15s linear;
+        --moz-transition: all 0.15s linear;
+    }
+    .appNavParent .bdRow.topRow .searchBar .form-group {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 15px;
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+        transition-delay: 0.35s;
+    }
+    .appNavParent .bdRow.topRow .searchBar.hiddenTransform {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-25px);
+        -webkit-transform: translateX(-25px);
+    }
+    .appNavParent .bdRow.topRow .searchBar.hiddenTransform .form-group {
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.25s;
+        -webkit-transition-duration: 0.25s;
+        -ms-transition-duration: 0.25s;
+        -moz-transition-duration: 0.25s;
+        -o-transition-duration: 0.25s;
+        transition-timing-function: linear;
+        -webkit-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        -ms-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        transition: all 0.25s linear;
+        --webkit-transition: all 0.25s linear;
+        --o-transition: all 0.25s linear;
+        --ms-transition: all 0.25s linear;
+        --moz-transition: all 0.25s linear;
+        background: #000;
+        padding-bottom: 100px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topNavLogo {
+        background: #000;
+        padding-right: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topNavLogo img {
+        height: 60px;
+        margin-left: 10px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav {
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-one {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-two {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-three {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-four {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-six {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-seven {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav .aniList-eight {
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li {
+        padding: 15px 20px;
+        font-size: 1.3rem;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li span {
+        display: block;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li span.h {
+        font-weight: 500;
+        color: #888;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appDropdown,
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appLink {
+        background: #fff url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/arrow-icons/right-arrow-angle-888888.svg) no-repeat calc(100% - 25px) 20px;
+        background-size: 10px;
+        border-top: 1px solid #eee;
+        cursor: pointer;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.userAccount {
+        background: #fcfcfc url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/arrow-icons/right-arrow-angle-888888.svg) no-repeat calc(100% - 25px) 20px;
+        background-size: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.userAccount span.h {
+        color: #666;
+        font-weight: 500;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.userAccount span.h a {
+        color: var(--nav-background);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer {
+        margin: 15px -20px -15px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList {
+        margin-bottom: 0;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown {
+        background: #fafafa url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/arrow-icons/down-arrow-angle-888888.svg) no-repeat calc(100% - 25px) 16px;
+        background-size: 10px;
+        border-top: 0;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li {
+        padding: 15px 20px !important;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li span.h {
+        color: #666;
+        font-weight: 400;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li .linksList {
+        margin: 15px -20px -15px;
+        background: #fff;
+        padding: 10px 20px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li .linksList li {
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 2px;
+        padding: 5px 10px !important;
+        border: 1px solid #eee;
+        font-size: 1.25rem;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li .linksList li a {
+        color: var(--nav-background);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appLink {
+        padding: 0 !important;
+        background: #fafafa url(https://choosemybicycle.s3.ap-south-1.amazonaws.com/static/icons/arrow-icons/down-arrow-angle-888888.svg) no-repeat calc(100% - 25px) 16px;
+        background-size: 10px;
+        border-top: 0 !important;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appLink a {
+        display: block;
+        padding: 15px 20px !important;
+        color: #000;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions.hiddenTransform {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(25px);
+        -webkit-transform: translateY(25px);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions.hiddenTransform .topLevelNav .aniList {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(25px);
+        -webkit-transform: translateY(25px);
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment {
+        position: relative;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment .bdRow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        padding: 9px;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.cart span {
+        display: none;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.cart img {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .appNavParent {
+        position: relative;
+        z-index: 300;
+    }
+    .appNavParent .appProcessBar .theBar {
+        background: #1efb31;
+    }
+    .appNavParent .bdRow.topRow {
+        padding: 6px;
+    }
+    .appNavParent .bdRow.topRow .appIcon {
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        z-index: 50;
+        background: #000;
+    }
+    .appNavParent .bdRow.topRow .appIcon a img {
+        height: 80px;
+    }
+    .appNavParent .bdRow.topRow .appControls {
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+        float: none;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment {
+        width: 66px;
+        height: auto;
+        cursor: pointer;
+        text-align: right;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment img {
+        width: 15px;
+        padding: 0;
+        margin-bottom: 8px;
+        display: inline-block;
+        margin-right: 3px;
+        margin-top: 4px;
+        vertical-align: middle;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.support {
+        width: 83px;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.login {
+        width: 141px;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.login .loginPrompter {
+        background: var(--nav-background);
+        position: absolute;
+        top: 42px;
+        right: 15px;
+        padding: 15px;
+        width: 300px;
+        z-index: 60;
+        box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.15);
+        transition-property: all;
+        -moz-transition-property: all;
+        -webkit-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-timing-function: ease;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        transition: all 0.5s ease;
+        --webkit-transition: all 0.5s ease;
+        --o-transition: all 0.5s ease;
+        --ms-transition: all 0.5s ease;
+        --moz-transition: all 0.5s ease;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.login .loginPrompter p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #fff;
+        line-height: 17px;
+        text-align: left;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.login .loginPrompter .defaultButton {
+        height: auto;
+        line-height: 30px;
+        border-color: #fff;
+        font-size: 1.2rem;
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.login .loginPrompter.hiddenTransform {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.login .loginPrompter:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid var(--nav-background);
+    }
+    .appNavParent .bdRow.topRow .appControls .bdRow .segment.cart span {
+        display: inline-block;
+    }
+    .appNavParent .bdRow.topRow .searchBar {
+        position: relative;
+        overflow: unset;
+        background: #000;
+        padding: 0 10px 10px;
+        z-index: 10;
+    }
+    .appNavParent .bdRow.topRow .searchBar .form-group {
+        margin-bottom: 0;
+    }
+    .appNavParent .bdRow.topRow .searchBar .form-group .defaultInput {
+        height: 40px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #000;
+        z-index: 40;
+        overflow: unset;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav {
+        margin-bottom: 0;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li:last-child {
+        margin-right: 0;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appDropdown {
+        padding: 15px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appLink a {
+        padding: 15px;
+        color: #fff;
+        display: block;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appLink.allLink span.h {
+        margin-bottom: 0 !important;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appLink.allLink a {
+        color: var(--nav-background);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appLink.allLink a .subtext {
+        display: block;
+        font-size: 1.15384615rem;
+        font-weight: 400;
+        color: #888;
+        margin-bottom: 5px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.appLink.allLink a .pseudoButton {
+        padding: 8px;
+        background: var(--nav-button-highlights);
+        color: #f1f1f1;
+        display: inline-block;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown span.h {
+        position: relative;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown span.h.op:after {
+        display: none;
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        width: calc(100% + 30px);
+        height: 5px;
+        background: var(--nav-background);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 47px;
+        z-index: 100;
+        background: #fff;
+        -webkit-box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.05);
+        width: 100%;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList {
+        text-align: left;
+        padding: 10px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown,
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appLink {
+        width: calc(100% / 3);
+        float: left;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown span.h,
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appLink span.h {
+        color: #444;
+        text-transform: none;
+        display: block;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown .linksList li,
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appLink .linksList li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown .linksList li a,
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appLink .linksList li a {
+        display: block;
+        font-weight: 400;
+        font-size: 1.15rem;
+        color: #888;
+        text-transform: none;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown.displaySubInline .linksList li {
+        display: inline-block;
+        margin-bottom: 4px;
+        margin-right: 2px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer .subList li.appDropdown.displaySubInline .linksList li a {
+        padding: 5px;
+        border: 1px solid #eee;
+        color: var(--nav-background);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown a {
+        color: #fff;
+    }
+    .appNavParent .bdRow.menuRow {
+        padding: 0;
+    }
+    .appNavParent .bdRow.topRow.graidentBar {
+        background: #000;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .appNavParent .bdRow.topRow .appIcon {
+        top: 5px;
+        left: 2%;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions {
+        float: left;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav {
+        margin-top: 1px;
+        text-align: center;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown .subMenuContainer {
+        width: 800px;
+    }
+    .appNavParent .bdRow.topRow .searchBar {
+        float: right;
+        padding: 4px;
+    }
+    .appNavParent .bdRow.topRow .searchBar .appSearchResults {
+        right: 5px;
+        left: auto;
+        top: 47px;
+        width: 450px;
+        height: 600px;
+    }
+    .appNavParent .bdRow.topRow .searchBar .resultsPageLink {
+        bottom: -558px;
+        right: 5px;
+        left: auto;
+        transform: none;
+        -webkit-transform: none;
+        width: 450px;
+    }
+    .appNavParent .bdRow.topRow .searchBar .resultsPageLink.hiddenTransform {
+        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+    }
+    .appNavParent .bdRow.menuRow {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .hideOnlyMobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .appControls .bdRow.controlRow {
+        position: relative;
+        z-index: 15;
+    }
+    .appNavParent .bdRow.topRow {
+        max-width: 1240px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .appNavParent .bdRow.topRow .appIcon {
+        left: 20px;
+        top: 12px;
+        height: 64px;
+        overflow: hidden;
+    }
+    .appNavParent .bdRow.topRow .searchBar {
+        width: calc(100% - 770px);
+    }
+    .appNavParent .bdRow.topRow .appNavOptions {
+        width: 730px;
+        margin-left: 36px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav {
+        text-align: left;
+        margin-left: 75px;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown:hover span.h:after {
+        display: block;
+    }
+    .appNavParent .bdRow.topRow .appNavOptions .topLevelNav li.macroDropdown:hover .subMenuContainer {
+        display: block;
+    }
+}
+
+.form-group input.defaultInput {
+    line-height: 45px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    color: #000;
+    display: block;
+    width: 100%;
+}
+
+.form-group input.defaultInput:active,
+.form-group input.defaultInput:focus {
+    border: 1px solid #000;
+}
+
+.form-group input:checked~.customCheckBox:after {
+    content: "";
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+}
+
+body {
+    color: #000;
+    font-size: 1.5rem;
+    font-family: noto sans kr, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer !important;
+}
+
+input:-webkit-autofill {
+    background-color: transparent;
+    color: #000;
+    --webkit-text-fill-color: #000;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    transition: background-color 5000s ease-in-out 0s;
+    color: #000;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    outline: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+* {
+    outline: 0;
+}
+
+.bdRow:after,
+.bdRow:before {
+    content: "";
+    display: table;
+}
+
+.bdRow:after {
+    clear: both;
+}
+
+.positionRelative {
+    position: relative;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+menu {
+    display: block;
+}
+
+[hidden] {
+    display: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+h1 {
+    margin: 0.67em 0;
+    font-size: 2em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button,
+input {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: helvetica neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+button,
+input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 4px 0 0;
+    line-height: normal;
+}
+
+input[type="file"] {
+    display: block;
+}
+
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+input[type="checkbox"]:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0;
+    border: 0;
+}
+
+.clearfix:after,
+.clearfix:before {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none !important;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible-xs {
+    display: none !important;
+}
+
+.visible-xs-block {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .visible-xs-block {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0;
+    border: 0;
+}
+
+.clearfix:after,
+.clearfix:before {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none !important;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible-xs {
+    display: none !important;
+}
+
+.visible-xs-block {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .visible-xs-block {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0;
+    border: 0;
+}
+
+.clearfix:after,
+.clearfix:before {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none !important;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible-xs {
+    display: none !important;
+}
+
+.visible-xs-block {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .visible-xs-block {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0;
+    border: 0;
+}
+
+.clearfix:after,
+.clearfix:before {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hide {
+    display: none !important;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible-xs {
+    display: none !important;
+}
+
+.visible-xs-block {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .visible-xs-block {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

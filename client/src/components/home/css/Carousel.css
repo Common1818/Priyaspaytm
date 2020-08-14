@@ -1,0 +1,33 @@
+.home-carousel .carousel {
+    background-image: url('https://images.unsplash.com/photo-1485381771061-e2cbd5317d9c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+    background-color: rgb(57, 62, 119) !important;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 900px) {
+    img.d-block.w-100 {
+        opacity: 1;
+        width: 85vw !important;
+        height: 60vh;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 1100px) {
+    img.d-block.w-100 {
+        width: 80vw !important;
+        height: 60vh;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 300px) {
+    img.d-block.w-100 {
+        /* width: 80vw !important; */
+        margin-top: 5px;
+    }
+}

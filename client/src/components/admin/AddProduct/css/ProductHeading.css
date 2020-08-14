@@ -1,0 +1,10 @@
+.select-category span {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.select-category select {
+    margin: 0px auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
