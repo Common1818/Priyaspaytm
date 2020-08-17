@@ -23,8 +23,10 @@ router.post(
   isSignedIn,
   isAuthenticated,
   isAdmin,
-  [check("brandname", "brand name is required").notEmpty()],
-  [check("description", "brand description is required").notEmpty()],
+  [
+    check("brandname", "brand name is required").notEmpty(),
+    check("description", "brand description is required").notEmpty(),
+  ],
   createBrand
 );
 

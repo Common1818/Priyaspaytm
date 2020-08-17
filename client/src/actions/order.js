@@ -5,11 +5,9 @@ import {
   GET_ALL_ORDERS,
   GET_ALL_ORDERS_ERROR,
 } from "./types";
-
 import { setAlert } from "./alert";
 import axios from "axios";
 const userId = localStorage.getItem("userId");
-
 export const createOrder = (data) => async (dispatch) => {
   const userId = localStorage.getItem("userId");
   if (!userId) {
@@ -28,14 +26,17 @@ export const createOrder = (data) => async (dispatch) => {
   try {
     const res = await axios.post(`/api/order/create/${userId}`, body, config);
     const messagesArray = res.data.messages;
+
     // orderAdded added message alert
     messagesArray.forEach((message) =>
       dispatch(setAlert(message.msg, "danger"))
     );
+
     dispatch({
       type: CREATE_ORDER,
       payload: res.data.order,
     });
+
     // reset redirect boolean so that cart can be visited again
     setTimeout(() => {
       dispatch({
@@ -49,10 +50,6 @@ export const createOrder = (data) => async (dispatch) => {
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
     }
-    //    dispatch({
-    //      payload: { errMessage: "Error getting all brands" },
-    //      type: ADD_BRAND_FAIL,
-    //    });
   }
 };
 
@@ -64,6 +61,12 @@ export const fetchOrder = (orderId) => async (dispatch) => {
     // orderAdded added message alert
 
     dispatch(setAlert("Order fetched successfully", "danger"));
+    if (res.data.billingDetails) {
+      console.log("billing details exist");
+      dispatch({
+        type: "BILLING_DETAILS_UPDATED",
+      });
+    }
 
     dispatch({
       type: CREATE_ORDER,
@@ -101,6 +104,65 @@ export const deleteOrder = (orderId) => async (dispatch) => {
     dispatch({
       type: DELETE_ORDER_ERROR,
     });
+  }
+};
+
+export const updateAddress = (orderId, data) => async (dispatch) => {
+  console.log(data, orderId);
+  const userId = localStorage.getItem("userId");
+  try {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const body = JSON.stringify({ pincode: data.pincode });
+    const res = await axios.post(`/api/pincode/check`, body, config);
+    const { Serviceable } = res.data;
+    if (!Serviceable) {
+      dispatch(setAlert("Sorry this pincode is not serviceable", "danger"));
+      dispatch({
+        type: "BILLING_DETAILS_ERROR",
+      });
+    } else {
+      console.log(Serviceable);
+      try {
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+        const body = JSON.stringify(data);
+        console.log(body);
+        console.log(`/api/order/${orderId}/${userId}`);
+        const res = await axios.put(
+          `/api/order/${orderId}/${userId}`,
+          body,
+          config
+        );
+        const messagesArray = res.data.messages;
+        messagesArray.forEach((message) =>
+          dispatch(setAlert(message.msg, "danger"))
+        );
+        dispatch({
+          type: "BILLING_DETAILS_UPDATED",
+        });
+      } catch (err) {
+        dispatch({
+          type: "BILLING_DETAILS_ERROR",
+        });
+        console.log(err);
+        const errors = err.response.data.errors;
+        if (errors) {
+          errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
+        }
+      }
+    }
+  } catch (err) {
+    const errors = err.response.data.errors;
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
+    }
   }
 };
 

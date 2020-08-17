@@ -1,4 +1,8 @@
 {
-    "mongoURI": "mongodb://localhost:27017/bicycle",
-    "jwtSecret": "Whatever"
+
+    "mongoURI": "mongodb+srv://kartik123:kartik123@devconnectorcourse.xn9xn.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "Whatever",
+    "merchantID": "ctygRR14184822145812",
+    "paytmWebsite": "WEBSTAGING",
+    "merchantKey": "UiakA_96V!oGG%nS"
 }

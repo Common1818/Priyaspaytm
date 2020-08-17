@@ -20,9 +20,10 @@ import UpdateProduct from "./components/admin/EditProduct/UpdateProduct";
 import ForgotPasswordForm from "./components/auth/ForgotPasswordForm";
 import Products from "./components/products/Products";
 import UserDashboard from "./components/user/UserDashboard";
+import Payment from "./components/Payment/Payment";
 import Cart from "./components/cart/Cart";
 import OrderPage from "./components/order/OrderPage";
-import Payment from "./components/Payment/Payment";
+// import payment from "./reducers/payment";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -59,7 +60,7 @@ const App = () => {
         />
         <AdminRoute exact path="/admin" component={AdminPanel} />
         <Route exact path="/order/:orderId" component={OrderPage} />
-        <Route exact path="/Pay" component={Payment} />
+        <Route exact path="/paynow" component={Payment} />
       </Switch>
       <Footer />
     </div>

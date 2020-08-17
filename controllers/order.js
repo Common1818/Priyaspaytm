@@ -1,5 +1,6 @@
 const Order = require("../models/Order");
 const User = require("../models/User");
+const { validationResult } = require("express-validator");
 
 exports.getOrderById = async (req, res, next, id) => {
   try {
@@ -15,14 +16,13 @@ exports.getOrderById = async (req, res, next, id) => {
 };
 
 exports.createOrder = async (req, res) => {
-  //   res.json(req.body);
   const order = new Order(req.body);
 
   try {
     await order.save();
     res.json({
       order,
-      messages: [{ msg: `"order was created Successfully` }],
+      messages: [{ msg: `Order was created Successfully` }],
     });
   } catch (err) {
     console.log(err);
@@ -31,20 +31,45 @@ exports.createOrder = async (req, res) => {
 };
 
 exports.getOrder = async (req, res) => {
-  res.json(req.order);
+  return res.json(req.order);
 };
 
 exports.deleteOrder = async (req, res) => {
   const order = req.order;
   res.json({
     order,
-    messages: [{ msg: `"order was deleted Successfully` }],
+    messages: [{ msg: `Order was deleted Successfully` }],
   });
   try {
     await order.remove();
   } catch (err) {
     console.log(err);
     return res.status(400).json({ errors: [{ msg: `Error deleting order` }] });
+  }
+};
+
+exports.updateOrderAddress = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      errors: errors.array(),
+    });
+  }
+  const order = req.order;
+  console.log(req.body);
+  order.billingDetails = req.body;
+
+  try {
+    await order.save();
+    res.json({
+      order,
+      messages: [{ msg: `billing Details were updated Successfully` }],
+    });
+  } catch (err) {
+    console.log(err);
+    return res
+      .status(400)
+      .json({ errors: [{ msg: `Error updating Billing details` }] });
   }
 };
 

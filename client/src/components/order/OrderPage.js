@@ -1,28 +1,53 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import DetailsForm from "./DetailsForm";
-import { fetchOrder, deleteOrder } from "../../actions/order";
-import { Redirect } from "react-router-dom";
+import { fetchOrder, deleteOrder, updateAddress } from "../../actions/order";
+import { redirectToPaytm } from "../../actions/payment";
 import "./css/OrderPage.css";
 import Loader from "../layout/Loader";
+import PaymentModal from "./PaymentModal";
 
-const OrderPage = (props) => {
-  var formatter = new Intl.NumberFormat("en-US", {
+const OrderPage = ({
+  fetchOrder,
+  deleteOrder,
+  updateAddress,
+  order,
+  order: { products, total, billingDetails },
+  match,
+  billingDetailsUpdated,
+  user,
+  redirectToPaytm,
+}) => {
+  const [details, setDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    address: "",
+    city: "",
+    pincode: "",
+    mobileNumber: "",
+  });
+
+  const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "INR",
   });
-  const { fetchOrder, deleteOrder } = props;
-  const { order } = props;
-  const { products, total } = order;
+
   useEffect(() => {
-    fetchOrder(props.match.params.orderId);
+    fetchOrder(match.params.orderId);
   }, []);
 
-  console.log(order);
-
-  if (localStorage.getItem("userId") == null) {
-    return <Redirect to="/" />;
-  }
+  const handleBilling = async (e) => {
+    e.preventDefault();
+    const addressUpdate = details.address;
+    console.log(details);
+    updateAddress(order._id, details);
+  };
+  // if (billingDetailsUpdated == true) {
+  //   setModalShow(true);
+  // }
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <div className="order-page-container container-lg">
@@ -50,7 +75,17 @@ const OrderPage = (props) => {
                 <h2>SubTotal: {formatter.format(total)}</h2>
               </div>
             </div>
-            <DetailsForm />
+            <PaymentModal
+              order={order}
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
+            <DetailsForm
+              handleBilling={handleBilling}
+              billingDetails={billingDetails}
+              details={details}
+              setDetails={setDetails}
+            />
           </div>
           <div className="transac-buttons">
             <button
@@ -61,7 +96,21 @@ const OrderPage = (props) => {
             >
               Cancel
             </button>
-            <button>Pay</button>
+            <button
+              className="payment-modal"
+              disabled={billingDetailsUpdated ? false : true}
+              onClick={(e) => {
+                e.preventDefault();
+                setModalShow(true);
+              }}
+            >
+              Pay
+            </button>
+            {billingDetailsUpdated ? null : (
+              <div className="text-danger">
+                Update billing details to proceed
+              </div>
+            )}
           </div>
         </>
       ) : (
@@ -73,6 +122,13 @@ const OrderPage = (props) => {
 
 const mapStateToProps = (state) => ({
   order: state.order.order,
+  user: state.auth.user,
+  billingDetailsUpdated: state.order.billingDetailsUpdated,
 });
 
-export default connect(mapStateToProps, { fetchOrder, deleteOrder })(OrderPage);
+export default connect(mapStateToProps, {
+  fetchOrder,
+  deleteOrder,
+  redirectToPaytm,
+  updateAddress,
+})(OrderPage);

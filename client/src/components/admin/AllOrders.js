@@ -19,7 +19,6 @@ const AllOrders = ({ orders, getAllOrders, loadingComplete }) => {
               <th>Status</th>
               <th>total</th>
               <th>Quantity</th>
-              <th>email</th>
             </tr>
             {orders &&
               orders.map((order) => {
@@ -29,7 +28,6 @@ const AllOrders = ({ orders, getAllOrders, loadingComplete }) => {
                     <td>{order.status}</td>
                     <td>{order.total}</td>
                     <td>{order.totalQuantity}</td>
-                    <td>{order.user.email}</td>
                   </tr>
                 );
               })}

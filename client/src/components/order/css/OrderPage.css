@@ -81,3 +81,48 @@
     color: #fff;
     font-weight: 800;
 }
+
+.billingbutton {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2rem !important;
+}
+
+.modal-content {
+    width: 100% !important;
+    background-image: url("http://www.dealnloot.com/wp-content/uploads/2018/03/paytm-offer.jpg");
+    background-position: center;
+    background-blend-mode: multiply;
+    border-radius: 20px;
+    /* background-color: rgba(17, 17, 34, 0.411); */
+    background-repeat: no-repeat;
+}
+
+.card {
+    opacity: 0.9;
+}
+
+button.payment-modal:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666 !important;
+}
+
+
+/* button.payment-modal:disabled::after {
+    content: '----------';
+    position: absolute;
+    left: 10px;
+} */
+
+
+/* ----------------------------------- */
+
+.billingbutton button {
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 500;
+    background-color: #f1f1f1;
+    font-family: sans-serif;
+    color: #111;
+}

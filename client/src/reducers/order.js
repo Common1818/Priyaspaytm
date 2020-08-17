@@ -25,6 +25,16 @@ export default function (state = initialState, action) {
         //  loading: false,
         redirect: null,
       };
+    case "BILLING_DETAILS_UPDATED":
+      return {
+        ...state,
+        billingDetailsUpdated: true,
+      };
+    case "BILLING_DETAILS_ERROR":
+      return {
+        ...state,
+        billingDetailsUpdated: false,
+      };
     case GET_ALL_ORDERS:
       return {
         ...state,
